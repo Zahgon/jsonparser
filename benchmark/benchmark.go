@@ -1,8 +1,5 @@
 package benchmark
 
-/*
-Small paylod, http log like structure. Size: 190 bytes
-*/
 var smallFixture []byte = []byte(`{
     "st": 1,
     "sid": 486,
@@ -27,9 +24,6 @@ type SmallPayload struct {
 	V    int
 }
 
-/*
-Medium payload (based on Clearbit API response)
-*/
 type CBAvatar struct {
 	Url string
 }
@@ -57,7 +51,6 @@ type MediumPayload struct {
 	Company map[string]interface{}
 }
 
-// Reponse from Clearbit API. Size: 2.4kb
 var mediumFixture []byte = []byte(`{
   "person": {
     "id": "d50887ca-a6ce-4e59-b89f-14f0b5d03b03",
@@ -152,10 +145,6 @@ var mediumFixture []byte = []byte(`{
   },
   "company": null
 }`)
-
-/*
-   Large payload, based on Discourse API. Size: 28kb
-*/
 
 type DSUser struct {
 	Username string
